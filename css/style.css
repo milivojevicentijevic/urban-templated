@@ -8,8 +8,10 @@
     --blue: #3498db;
     --darkGray: #3f3f3f;
     --gray: #999;
+    --mediumGray: #ccc;
     --lightGray: #ddd;
-    --white: #fafafa;
+    --cream: #fafafa;
+    --white: #fff;
     --black: #000;
 
     --scope-one: 'Scope One', serif; 
@@ -25,7 +27,7 @@
 body {
     font-family: var(--scope-one);
     font-size: var(--gfs);
-    background-color: var(--white);
+    background-color: var(--cream);
 }
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
@@ -37,7 +39,7 @@ h4 {font-size: var(--fsh4);}
 p {
     color: var(--gray);
     margin-bottom: 30px;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 .py {
     padding: 80px 0;
@@ -61,7 +63,7 @@ img {
 }
 .btn {
     background-color: var(--blue);
-    color: var(--white);
+    color: var(--cream);
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 5px;
@@ -89,7 +91,7 @@ header {
 }
 .banner h1 {
     font-size: var(--fsh1);
-    color: var(--white);
+    color: var(--cream);
     background-color: red;
 }
 .main-btn {
@@ -108,10 +110,10 @@ header {
     background-color: var(--blue);
 }
 .highlight h2 {
-    color: var(--white);
+    color: var(--cream);
 }
 .highlight p {
-    color: var(--white);
+    color: var(--cream);
 }
 .highlight div:nth-child(1) {
     width: 65%;
@@ -120,7 +122,7 @@ header {
     width: 370px;
 }
 .light-btn {
-    background-color: var(--white);
+    background-color: var(--cream);
     color: var(--blue);
 }
 /* articles */
@@ -141,5 +143,47 @@ header {
     width: 340px;
     text-align: center;
 }
+/* footer */
+.footer {
+    text-align: center;
+    background-color: var(--white);
+}
+.footer div:first-child {
+    margin-bottom: 20px;
+}
+.footer div:last-child p {
+    color: var(--gray);
+}
+.footer div:last-child span {
+    color: var(--darkGray);
+}
+.footer div a {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--gray);
+}
+.footer div a:hover {
+    color: var(--mediumGray);
+}
+.footer div a .outer {
+    height: 55px;
+    width: 55px;
+    border: 1px solid var(--lightGray);
+    border-radius: 50%;
+    padding: 3px;
+}
+.footer div a .inner {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--lightGray);
+    border-radius: 50%;
+    padding: 8px;
+}
+.footer div a .inner i {
+    font-size: 1.75rem;
+    border: 1px solid transparent;
+    border-radius: 50%;
+}
+
 
 
