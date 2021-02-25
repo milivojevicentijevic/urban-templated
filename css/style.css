@@ -8,23 +8,56 @@
     --blue: #3498db;
     --darkGray: #3f3f3f;
     --gray: #999;
+    --lightGray: #ddd;
     --white: #fafafa;
     --black: #000;
 
     --scope-one: 'Scope One', serif; 
     --trocchi: 'Trocchi', serif; 
 
-    --gfs: 16px;
-    --lfs: 20px;
-    --fsh1: 48px;
+    --gfs: 1rem;
+    --lfs: 1.25rem;
+    --fsh1: 3.75rem;
+    --fsh2: 2.25rem;
+    --fsh3: 1.75rem;
+    --fsh4: 1.25rem;
 }
 body {
-    font-family: var(--trocchi);
+    font-family: var(--scope-one);
     font-size: var(--gfs);
     background-color: var(--white);
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--scope-one);
+    margin-bottom: 30px;
+}
+h1 {font-size: var(--fsh1);}
+h2 {font-size: var(--fsh2);}
+h3 {font-size: var(--fsh3);}
+h4 {font-size: var(--fsh4);}
+p {
+    color: var(--gray);
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+.py {
+    padding: 80px 0;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.img-wrapper {
+    height: 370px;
+    padding: 7px;
+    border: 1px solid var(--lightGray);
+    border-radius: 50%;
+}
+img {
+    width: 100%;
+    border-radius: 50%;
 }
 .btn {
     background-color: var(--blue);
@@ -33,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 12px 20px;
     border-radius: 5px;
     display: inline-block;
+    font-weight: 700;
 }
 /* header */
 header {
@@ -45,11 +79,13 @@ header {
     height: 100vh;
     background-image: url(../img/banner.jpg);
     background-size: cover;
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 .banner .intro {
-    position: absolute;
-    top: 200px;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
 }
 .banner h1 {
     font-size: var(--fsh1);
@@ -61,4 +97,49 @@ header {
     font-size: var(--lfs);
 }
 /* about */
+.about div:nth-child(1) {
+    width: 370px;
+}
+.about div:nth-child(2) {
+    width: 65%;
+}
+/* hightlight */
+.highlight {
+    background-color: var(--blue);
+}
+.highlight h2 {
+    color: var(--white);
+}
+.highlight p {
+    color: var(--white);
+}
+.highlight div:nth-child(1) {
+    width: 65%;
+}
+.highlight div:nth-child(2) {
+    width: 370px;
+}
+.light-btn {
+    background-color: var(--white);
+    color: var(--blue);
+}
+/* articles */
+.articles article:first-child {
+    text-align: center;
+}
+.articles h2 {
+    margin-bottom: 25px;
+}
+.articles h2 + p {
+    font-size: var(--lfs);
+}
+.articles .img-wrapper {
+    height: 340px;
+    margin: 30px 0;
+}
+.articles .card {
+    width: 340px;
+    text-align: center;
+}
+
 
