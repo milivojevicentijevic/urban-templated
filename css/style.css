@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Scope+One&family=Trocchi&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --blue: #3498db;
+    --darkGray: #3f3f3f;
+    --gray: #999;
+    --white: #fafafa;
+    --black: #000;
+
+    --scope-one: 'Scope One', serif; 
+    --trocchi: 'Trocchi', serif; 
+
+    --gfs: 16px;
+    --lfs: 20px;
+    --fsh1: 48px;
+}
+body {
+    font-family: var(--trocchi);
+    font-size: var(--gfs);
+    background-color: var(--white);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--scope-one);
+}
+.btn {
+    background-color: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+/* banner */
+.banner {
+    height: 100vh;
+    background-image: url(../img/banner.jpg);
+    background-size: cover;
+    position: relative;
+}
+.banner .intro {
+    position: absolute;
+    top: 200px;
+}
+.banner h1 {
+    font-size: var(--fsh1);
+    color: var(--white);
+    background-color: red;
+}
+.main-btn {
+    padding: 18px 30px;
+    font-size: var(--lfs);
+}
+/* about */
+
