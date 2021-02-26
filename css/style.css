@@ -19,10 +19,13 @@
 
     --gfs: 1rem;
     --lfs: 1.25rem;
-    --fsh1: 3.75rem;
+    --fsh1: 4.25rem;
     --fsh2: 2.25rem;
     --fsh3: 1.75rem;
     --fsh4: 1.25rem;
+
+    --fwfat: 700;
+    --fwslim: 300;
 }
 body {
     font-family: var(--scope-one);
@@ -68,31 +71,61 @@ img {
     padding: 12px 20px;
     border-radius: 5px;
     display: inline-block;
-    font-weight: 700;
+    font-weight: var(--fwfat);
 }
 /* header */
 header {
-    position: fixed;
-    top: 0;
+    width: 100%;
+    position: absolute;
+    top: 30px;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cream);
 }
+header .logo span {
+    color: var(--blue);
+}
+.logo {
+    margin-left: 20px;
+}
+.logo h4 {
+    margin-bottom: 0;
+    font-weight: var(--fwslim);
+}
+.hamburger {
+    font-size: var(--lfs);
+    margin-right: 20px;
+}
+
 /* banner */
 .banner {
     height: 100vh;
-    background-image: url(../img/banner.jpg);
-    background-size: cover;
     display: flex;
     align-items: center;
+    position: relative;
+}
+.banner::before {
+    content: "";
+    background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)), url(../img/banner.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
 }
 .banner .intro {
     text-align: center;
     width: 60%;
     margin: 0 auto;
-}
-.banner h1 {
-    font-size: var(--fsh1);
+    position: relative;
     color: var(--cream);
-    background-color: red;
+}
+.banner .intro h3 {
+    font-weight: var(--fwslim);
+    line-height: 1.6;
 }
 .main-btn {
     padding: 18px 30px;
@@ -109,7 +142,7 @@ header {
 .highlight {
     background-color: var(--blue);
 }
-.highlight h2 {
+.highlight h3 {
     color: var(--cream);
 }
 .highlight p {
